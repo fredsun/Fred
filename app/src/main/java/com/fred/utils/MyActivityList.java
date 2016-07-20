@@ -23,20 +23,20 @@ import java.util.List;
  * 
  * ======================================================
  */
-public class MyApplication {
+public class MyActivityList {
 	// 对于新增和删除操作add和remove，LinedList比较占优势，因为ArrayList实现了基于动态数组的数据结构，要移动数据。LinkedList基于链表的数据结构,便于增加删除
 	private List<Activity> activityList = new LinkedList<Activity>();
-	private static MyApplication instance;
+	private static MyActivityList instance;
 	private Activity delActivity;
 
-	private MyApplication() {
+	private MyActivityList() {
 
 	}
 
 	// 单例模式中获取唯一的MyApplication实例
-	public static MyApplication getInstance() {
+	public static MyActivityList getInstance() {
 		if (null == instance) {
-			instance = new MyApplication();
+			instance = new MyActivityList();
 		}
 		return instance;
 	}
