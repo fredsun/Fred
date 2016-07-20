@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentActivity;
 
 import com.baidu.mtjstatsdk.StatSDKService;
 import com.fred.utils.LoggerManager;
-import com.fred.utils.MyApplication;
+import com.fred.utils.MyActivityList;
 
 /**
  * Created by Administrator on 2016/7/18.
@@ -15,7 +15,7 @@ public class BaseActivity extends FragmentActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MyApplication.getInstance().addActivity(this);
+        MyActivityList.getInstance().addActivity(this);
         //百度统计_设置渠道
         StatSDKService.setAppChannel(this,"channelFred1",true,"ead7b6b463");
         //百度统计_设置日志发送延迟时间
@@ -38,6 +38,6 @@ public class BaseActivity extends FragmentActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        MyApplication.getInstance().delActivity(this);
+        MyActivityList.getInstance().delActivity(this);
     }
 }
