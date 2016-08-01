@@ -39,6 +39,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+
+
+        <!-- BUGLY相关 -->
+        <!-- 配置APP ID -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="900041542" />
+        <!-- 配置APP版本号 -->
+        <meta-data
+            android:name="BUGLY_APP_VERSION"
+            android:value="0.0" />
+        <!-- 配置APP渠道号 -->
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="ten1" />
+        <!-- 配置Bugly调试模式（true或者false）-->
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" />
+
+
+    </application>
 </manifest>
