@@ -7,9 +7,9 @@ import com.fred.R;
 import com.fred.base.BaseActivity;
 
 /**
- * Created by Administrator on 2016/7/19.
+ * Created by Fred on 2016/9/18.
  */
-public class HomeActivity extends BaseActivity {
+public class HomeActivity extends BaseActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

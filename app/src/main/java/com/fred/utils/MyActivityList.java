@@ -2,7 +2,7 @@ package com.fred.utils;
 
 import android.app.Activity;
 
-import com.fred.activity.HomeActivity;
+import com.fred.activity.SeekBarActivity;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -93,7 +93,7 @@ public class MyActivityList {
 		Iterator<Activity> it = activityList.iterator();
 		while (it.hasNext()) {
 			Activity lActivity = it.next();
-			if (lActivity.getClass().equals(HomeActivity.class)) {
+			if (lActivity.getClass().equals(SeekBarActivity.class)) {
 				continue;
 			}
 			lActivity.finish();

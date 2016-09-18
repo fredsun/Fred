@@ -1,7 +1,6 @@
 package com.fred.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +28,7 @@ public class LocationActivity extends BaseActivity {
         // -----------demo view config ------------
         setContentView(R.layout.activity_loc);
         LocationResult = (TextView) findViewById(R.id.textView1);
-        LocationResult.setMovementMethod(ScrollingMovementMethod.getInstance());
+        LocationResult.setMovementMethod(ScrollingMovementMethod.getInstance());//可滑动的TextView
         startLocation = (Button) findViewById(R.id.addfence);
 
     }
