@@ -35,4 +35,5 @@ dependencies {
     compile 'com.android.support:multidex:1.0.0'
     //解决Dex超过数量
     compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/protobuf-java-2.6.1.jar')
 }
