@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="auto_focus" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="quit" type="id"/>
+
+    <!-- 聊天弹出框4个Action -->
+    <item name="delete" type="id"/>
+    <item name="copy" type="id"/>
+    <item name="forward" type="id"/>
+    <item name="retry" type="id"/>
+    <!-- 聊天弹出框监听setTag的id-->
+    <item type="id" name="tag_chat_position" />
+    <item type="id" name="tag_chat_type" />
+    <item type="id" name="tag_chat_message" />
+    <item type="id" name="tag_chat_bitmap" />
+    <!-- Title ID -->
+    <item type="id" name="id_title" />
+    <!-- 搜索ID -->
+    <item type="id" name="id_search" />
+    <!-- TextView ID -->
+    <item type="id" name="id_tv" />
+    <item type="id" name="id_tv1" />
+    <item type="id" name="id_tv2" />
+    <item type="id" name="id_tv3" />
+    <item type="id" name="id_tv4" />
+    <item type="id" name="id_tv5" />
+    <item type="id" name="id_tv6" />
+    <item type="id" name="id_tv7" />
+    <item type="id" name="id_tv8" />
+
+    <!-- Layout ID -->
+    <item type="id" name="id_layout" />
+    <item type="id" name="id_layout1" />
+    <item type="id" name="id_layout2" />
+    <item type="id" name="id_layout3" />
+    <item type="id" name="id_layout4" />
+    <item type="id" name="id_layout5" />
+
+
+    <!-- ImageView ID -->
+    <item type="id" name="id_iv" />
+    <item type="id" name="id_iv1" />
+    <item type="id" name="id_iv2" />
+    <!-- GridView ID -->
+    <item type="id" name="id_grid" />
+    <!-- 取消 ID -->
+    <item type="id" name="id_cancel" />
+    <!-- 确认 ID -->
+    <item type="id" name="id_confirm" />
+    <!-- 发送 ID -->
+    <item type="id" name="id_send" />
+    <!-- 加好友 ID -->
+    <item type="id" name="id_add_friend"/>
+    <!-- 通过验证 ID -->
+    <item type="id" name="id_ok_vary"/>
+    <!-- EditText ID -->
+    <item type="id" name="id_edit1"/>
+    <item type="id" name="id_edit2"/>
+    <item type="id" name="id_edit3"/>
+    <!-- Button ID -->
+    <item type="id" name="id_button1"/>
+    <item type="id" name="id_button2"/>
+    <!-- RadioButton ID -->
+    <item type="id" name="id_rb" />
+    <item type="id" name="id_rb1"/>
+    <item type="id" name="id_rb2"/>
+
+
+    <!-- 回复ID -->
+    <item type="id" name="id_reply"/>
+
+    <!-- 错误页面的ID -->
+    <item type="id" name="id_error" />
+
+</resources>

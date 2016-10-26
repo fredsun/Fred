@@ -21,7 +21,7 @@ android {
     }
 
     sourceSets {
-        main() {
+        main {
             jniLibs.srcDirs = ['libs']
         }
     }
@@ -36,4 +36,5 @@ dependencies {
     //解决Dex超过数量
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/protobuf-java-2.6.1.jar')
+    compile files('libs/core.jar')
 }

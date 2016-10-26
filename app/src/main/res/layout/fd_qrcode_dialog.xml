@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:lefthand="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="1.44dp"
+              android:background="@drawable/bg_frame_button"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:weightSum="1">
+
+
+    <ImageView
+        android:id="@+id/qr_code"
+        android:layout_width="194.4dp"
+        android:layout_height="194.4dp"
+        android:layout_marginTop="33.6dp"/>
+
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.4dp"
+        android:layout_marginBottom="14.4dp"
+        android:text="使用“左手”扫描二维码，加为好友"
+        android:textColor="#888888"
+        android:textSize="11.33sp"/>
+
+    <LinearLayout
+        android:id="@+id/qrCode_dialog"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="14.4dp"
+        android:paddingTop="13.92dp" android:orientation="horizontal"
+        android:paddingLeft="9.6dp" android:paddingRight="9.6dp">
+
+        <ImageView
+            android:id="@+id/qr_avatar_url"
+            android:layout_width="38.4dp"
+            android:layout_height="38.4dp"
+            android:src="@drawable/default_img"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="38.4dp"
+            android:layout_marginLeft="9.6dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/qr_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jkljlkjkl"
+                    android:textColor="#444444"
+                    android:textSize="14.66sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/qr_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.76dp"
+                    android:src="@drawable/comment_icon_id"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2.4dp">
+
+                <TextView
+                    android:id="@+id/tv_zuoshou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="bottom"
+                    android:text="左手号："
+                    android:textColor="#888888"
+                    android:textSize="11.33sp"
+                    />
+
+                <TextView
+                    android:id="@+id/qr_handsup_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="bottom"
+                    android:textColor="#888888"
+                    android:textSize="11.33sp"/>
+
+                <TextView
+                    android:id="@+id/qr_user_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="45.66dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="#888888"
+                    android:textSize="11.33sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_right_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:singleLine="true"
+            android:maxLength="8"
+            android:ellipsize="end"
+            android:textColor="#888888"
+            android:textSize="11.33sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+</LinearLayout>
