@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Fred.iml" filepath="$PROJECT_DIR$/Fred.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fredlibrary/fredlibrary.iml" filepath="$PROJECT_DIR$/fredlibrary/fredlibrary.iml" />
     </modules>
   </component>
 </project>
