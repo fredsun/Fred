@@ -36,7 +36,5 @@ dependencies {
     //解决Dex超过数量
     compile files('libs/protobuf-java-2.6.1.jar')
     compile 'com.nineoldandroids:library:2.4.0'
-    compile('com.github.afollestad.material-dialogs:core:0.8.5.3@aar') {
-        transitive = true//排除传递性依赖
-    }
+
 }

@@ -17,6 +17,8 @@
 package com.fred.ui.activity.qrcode;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -25,6 +27,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -36,8 +40,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.fred.R;
 import com.fred.ui.activity.qrcode.camera.CameraManager;
 import com.fred.ui.activity.qrcode.decode.DecodeUtils;
@@ -94,6 +98,8 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
     private Rect cropRect;
     private int dataMode = DecodeUtils.DECODE_DATA_MODE_QRCODE;
 
+    View dialogView;
+    Dialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -401,32 +407,44 @@ public class CaptureActivity extends Activity implements SurfaceHolder.Callback 
             onCameraPreviewSuccess();
         } catch (IOException ioe) {
             Log.w(TAG_LOG, ioe);
-            displayFrameworkBugMessageAndExit();
+            showPermissionError();
         } catch (RuntimeException e) {
             // Barcode Scanner has seen crashes in the wild of this variety:
             // java.?lang.?RuntimeException: Fail to connect to camera service
             Log.w(TAG_LOG, "Unexpected error initializing camera", e);
-            displayFrameworkBugMessageAndExit();
+            showPermissionError();
         }
 
     }
 
-    private void displayFrameworkBugMessageAndExit() {
-        captureErrorMask.setVisibility(View.VISIBLE);
-        final MaterialDialog.Builder builder = new MaterialDialog.Builder(this);
-        builder.cancelable(true);
-        builder.title("fred");
-        builder.content("Failed to open camera, please ensure the permission is allowed and try again");
-        builder.positiveText("Ok");
-        builder.callback(new MaterialDialog.ButtonCallback() {
-            @Override
-            public void onPositive(MaterialDialog dialog) {
-                super.onPositive(dialog);
-                finish();
-            }
-        });
-        builder.show();
+    public void showPermissionError(){
+            dialogView = LayoutInflater.from(this).inflate(
+                    R.layout.qr_dialog, null);
+            dialog = new AlertDialog.Builder(this).create();
+            dialog.show();
+            dialog.getWindow().setContentView(dialogView);
+            dialog.setCanceledOnTouchOutside(true);
+            int width = this.getWindowManager().getDefaultDisplay().getWidth();// 得到当前显示设备的宽度，单位是像素
+            android.view.WindowManager.LayoutParams params = dialog.getWindow()
+                    .getAttributes();// 得到这个dialog界面的参数对象
+            params.width = width - (width / 6);// 设置dialog的界面宽度
+            params.height = android.view.ViewGroup.LayoutParams.WRAP_CONTENT;// 设置dialog高度为包裹内容
+            params.gravity = Gravity.CENTER;// 设置dialog的重心
+            dialog.getWindow().setAttributes(params);
+            TextView tv_confirm = (TextView) dialog.findViewById(R.id.tv_confirm);
+            TextView tv_dialog_hint = (TextView) dialog.findViewById(R.id.tv_dialog_hint);
+            tv_dialog_hint.setText("请给予打开照相机权限");
+            tv_confirm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    dialog.dismiss();
+                    finish();
+                }
+            });
+            dialog.setCancelable(false);// 屏蔽取消（back）键
+            dialog.setCanceledOnTouchOutside(false);// 屏蔽非dialog区域点击dialog关闭
     }
+
 
     public Rect getCropRect() {
         return cropRect;
