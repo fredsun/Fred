@@ -36,10 +36,13 @@
     <!--END百度定位-->
 
     <!-- 二维码 -->
-    <uses-permission android:name="android.permission.FLASHLIGHT"/>
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+
 
     <application
         android:name=".utils.MyApplication"
@@ -83,12 +86,6 @@
         </activity>
 
         <activity android:name=".activity.QRActivity">
-        </activity>
-
-        <activity android:name="com.zbar.lib.CaptureActivity">
-        </activity>
-
-        <activity android:name=".activity.CitywheelActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -96,10 +93,15 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.activity.qrcode.CaptureActivity">
 
+        </activity>
 
+        <activity android:name=".activity.CitywheelActivity">
 
+        </activity>
 
+        <activity android:name=".ui.activity.qrcode.ResultActivity"/>
 
 
     </application>

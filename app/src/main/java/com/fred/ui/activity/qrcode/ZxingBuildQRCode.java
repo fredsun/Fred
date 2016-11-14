@@ -1,4 +1,4 @@
-package com.zbar.lib;
+package com.fred.ui.activity.qrcode;
 
 import java.util.Hashtable;
 

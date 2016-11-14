@@ -3,4 +3,13 @@
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorPrimaryDark">#4CAF50</color>
     <color name="colorAccent">#5CACEE</color>
+
+    <color name="common_list_item_bg_pressed_color">#FFEEEEEE</color>
+    <color name="common_list_item_bg_normal_color">#FFFEFEFE</color>
+
+    <color name="black">#FF000000</color>
+    <color name="alpha_80_black">#CC000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+
 </resources>

@@ -16,9 +16,9 @@ import android.widget.TextView;
 
 import com.fred.R;
 import com.fred.base.BaseActivity;
+import com.fred.ui.activity.qrcode.CaptureActivity;
 import com.google.zxing.WriterException;
-import com.zbar.lib.CaptureActivity;
-import com.zbar.lib.ZxingBuildQRCode;
+import com.fred.ui.activity.qrcode.ZxingBuildQRCode;
 
 import java.io.UnsupportedEncodingException;
 

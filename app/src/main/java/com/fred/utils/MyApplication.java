@@ -1,12 +1,8 @@
 package com.fred.utils;
 
-import android.app.Service;
 import android.os.Vibrator;
 import android.support.multidex.MultiDexApplication;
 import android.widget.Toast;
-
-import com.baidu.location.service.LocationService;
-import com.baidu.mapapi.SDKInitializer;
 
 
 /**
@@ -15,7 +11,6 @@ import com.baidu.mapapi.SDKInitializer;
 public class MyApplication extends MultiDexApplication {
 
     public static MyApplication mContext;//主线程上下文
-    public LocationService locationService;
     public Vibrator mVibrator;
     private static Toast mToast = null;//全局Toast
     @Override
@@ -25,9 +20,8 @@ public class MyApplication extends MultiDexApplication {
          * 初始化定位sdk
          */
         mContext = this;
-        locationService = new LocationService(getApplicationContext());
-        mVibrator =(Vibrator)getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
-        SDKInitializer.initialize(getApplicationContext());
+//        mVibrator =(Vibrator)getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
+//        SDKInitializer.initialize(getApplicationContext());
 
     }
 
