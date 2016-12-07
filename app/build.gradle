@@ -41,5 +41,6 @@ dependencies {
     //解决Dex超过数量
     compile files('libs/protobuf-java-2.6.1.jar')
     compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'//16.4google官方底部导航栏
 
 }

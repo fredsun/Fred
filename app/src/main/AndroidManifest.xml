@@ -86,11 +86,7 @@
         </activity>
 
         <activity android:name=".activity.QRActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".ui.activity.qrcode.CaptureActivity">
@@ -102,6 +98,13 @@
         </activity>
 
         <activity android:name=".ui.activity.qrcode.ResultActivity"/>
+        <activity android:name=".activity.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
     </application>
