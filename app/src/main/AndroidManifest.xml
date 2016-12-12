@@ -43,8 +43,11 @@
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
+    <!--连接网络-->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!--监听网络状态-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--监听wifi状态-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
 
