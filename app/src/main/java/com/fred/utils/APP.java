@@ -1,16 +1,15 @@
 package com.fred.utils;
 
 import android.os.Vibrator;
-import android.support.multidex.MultiDexApplication;
 import android.widget.Toast;
 
 
 /**
  * Created by Administrator on 2016/7/20.
  */
-public class MyApplication extends MultiDexApplication {
+public class APP extends BaseApp {
 
-    public static MyApplication mContext;//主线程上下文
+    private static APP mContext;//主线程上下文
     public Vibrator mVibrator;
     private static Toast mToast = null;//全局Toast
     @Override
@@ -36,5 +35,9 @@ public class MyApplication extends MultiDexApplication {
         }
 
         mToast.show();
+    }
+
+    public static APP getInstance(){
+        return mContext;
     }
 }

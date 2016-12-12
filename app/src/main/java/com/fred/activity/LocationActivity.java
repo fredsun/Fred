@@ -51,7 +51,7 @@ public class LocationActivity extends BaseActivity {
 //        // TODO Auto-generated method stub
 //        super.onStart();
 //        // -----------location config ------------
-//        locationService = ((MyApplication) getApplication()).locationService;
+//        locationService = ((APP) getApplication()).locationService;
 //        //获取locationservice实例，建议应用中只初始化1个location实例，然后使用，可以参考其他示例的activity，都是通过此种方式获取locationservice实例的
 //        locationService.registerListener(mListener);
 //        //注册监听
