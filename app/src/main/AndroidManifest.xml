@@ -75,7 +75,7 @@
             </intent-filter>
         </service>
         
-        <receiver android:name=".network.NetworkConnectChangeReceiver">
+        <receiver android:name=".network.NetworkConnectChangedReceiver">
         </receiver>
 
         <activity
