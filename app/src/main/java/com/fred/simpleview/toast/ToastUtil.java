@@ -1,4 +1,4 @@
-package com.fred.simpleview;
+package com.fred.simpleview.toast;
 
 import android.content.Context;
 import android.view.Gravity;
@@ -10,7 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fred.R;
-import com.fred.activity.ExToast;
 
 /**
  * 弹出任意位置的toast,直接ToastUtil.showShortToast(this, System.currentTimeMillis() + "");
